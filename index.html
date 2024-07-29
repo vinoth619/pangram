@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>pangram</title>
+</head>
+<body>
+    <h1>find pangram</h1>
+    <input type="text" id="ins" placeholder="enter the string">
+    <button onclick="send()">pangram</button>
+    <h2 id="show"></h2>
+    <script>
+        function send(){
+        var pan="abcdefghijklmnopqrstuvwxyz"
+        var vin=document.getElementById("ins")
+                vin=vin.value;
+                var a="hel"
+                vin=vin.toLowerCase()
+                console.log(vin)
+               var fn=false;
+        for(let i=0; i<pan.length; i++){
+             if(vin.includes(pan[i])){
+                fn=true
+             }
+             else{
+                fn=false;
+                break;
+             }
+         
+        }
+        if(fn==true){
+      document.getElementById("show").innerHTML="this string is pangram"
+        }
+        else{
+            document.getElementById("show").innerHTML="this string is not a pangram"
+
+        }
+    }
+       
+    </script>
+    
+</body>
+</html>
